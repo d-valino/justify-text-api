@@ -1,6 +1,6 @@
 const LINE_LIMIT = 80;
 
-export default function justify(input: string) {
+export default function justify(input: string): string {
     const words = input.replace(/\n/g, '').split(/\s+/);
     let output = '';
     

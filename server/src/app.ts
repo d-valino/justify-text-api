@@ -1,19 +1,12 @@
-import express from "express"
-// import { justify } from './modules/justify.js'
+import express from "express";
+import { apiRoutes } from "./modules/routes.js";
 
-const app = express()
+const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+function registerRoutes(app: express.Express) {
+  app.use("/api", apiRoutes());
+}
 
-app.post('/api/justify', express.text({ type: 'text/plain' }), (req, res) => {
-  const input: string = req.body;
+registerRoutes(app);
 
-  // const output = justify(input);
-
-  res.set('Content-Type', 'text/plain');
-  res.send('output');
-})
-
-export default app
+export default app;
