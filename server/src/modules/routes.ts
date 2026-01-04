@@ -1,8 +1,6 @@
 import { Router} from 'express';
-import express from 'express';
-import { justifyController } from './controller.js';
-
-const textPlainMiddleware = express.text({ type: 'text/plain' });
+import { textPlainMiddleware } from './middleware/justifyMiddleware.js';
+import { justifyController } from './controller/justifyController.js';
 
 export function apiRoutes() {
 	const router = Router();
