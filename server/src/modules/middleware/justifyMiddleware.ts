@@ -4,7 +4,7 @@ import { verifyJwt } from "../services/auth/token.js";
 import { consumeWords } from '../services/auth/rateLimit.js';
 
 
-export const textPlainMiddleware = express.text({ type: 'text/plain' });
+export const textPlainMiddleware = express.text({ type: 'text/plain', limit: '50mb' });
 
 
 export function tokenMiddleware(req: Request, res: Response, next: NextFunction) {

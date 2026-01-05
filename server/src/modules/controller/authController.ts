@@ -11,7 +11,7 @@ export function authController(req: Request, res: Response) {
 	const { email } = req.body;
 
 	if (typeof email !== "string" || !isValidEmail(email)) {
-		return res.status(400).json({ error: "Invalid email" });
+		return res.status(401).json({ error: "Invalid email" });
 	}
 
 	// Create token with JWT

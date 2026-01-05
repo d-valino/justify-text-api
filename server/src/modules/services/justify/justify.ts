@@ -37,9 +37,6 @@ function fillLine(state: {index: number}, words: string[], line: string[]): { to
 
 function justifyLine(line: string[], total_letters: number): string
 {
-	if (line.length <= 1)
-		return line[0] + '\n';
-
 	const total_spaces = LINE_LIMIT - total_letters;
 	const normal_spaces = Math.floor(total_spaces / (line.length - 1));
 	let extra_spaces = total_spaces % (line.length - 1);
