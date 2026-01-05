@@ -13,7 +13,7 @@ This is a small API that justifies plain text to a fixed line width (80 characte
 Clone the repository and install dependencies:
 
 ```
-git clone <your-repo-url>
+git clone https://github.com/d-valino/justify-text-api.git
 
 cd justify-text-api/server/
 
